@@ -23,8 +23,11 @@ class Die {
     }
 
     roll () {
+        this.div.classList.remove( `d${ this.value }` );
         this.value = Math.ceil( Math.random() * 6 );
+        this.div.classList.add( `d${ this.value }` );
         this.div.innerText = this.value;
+        // this.div.innerHTML = '<span class="dot"></span>'.repeat(this.value);
     }
 }
 
@@ -35,7 +38,6 @@ dieBtn.addEventListener( 'click', () => {
 } );
 
 rollBtn.addEventListener( 'click', () => {
-    console.log( dice );
     dice.forEach( die => die.roll() );
 } );
 

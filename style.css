@@ -1,12 +1,39 @@
+* { 
+    box-sizing: border-box;
+}
+
 .die {
     width: 200px;
     height: 200px;
     border: 1px solid black;
     border-radius: 5px;
     margin: 5px;
+    display: flex;
+    padding: 1em;
 }
 
 #dice-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.dot {
+    width: 16%;
+    height: 16%;
+    border-radius: 50%;
+    background-color: #000;
+    display: block;
+    margin: auto;
+}
+
+.d1 .dot {
+    margin: auto;
+}
+
+.d2 {
+    flex-direction: column;
+}
+
+.d2 .dot:first-child {
+    align-self: flex-start;
 }
